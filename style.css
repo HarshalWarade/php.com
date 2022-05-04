@@ -1,0 +1,36 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    box-sizing: border-box;
+}
+.font 
+{
+    font-family: consolas;
+}
+.mainNav
+{
+    height: 33vh;
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #999;
+}
+
+.main
+{
+    margin: 40px;
+}
+.wrapper
+{
+    margin: 20px 0 0 20px;
+    /* margin */
+}
+
+.myMargin
+{
+    margin-top: 30px;
+}

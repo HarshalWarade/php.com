@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning PHP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body>
+    <div class="mainNav">
+        <h2>Learn PHP</h2>
+    </div>
+    <div class="main">
+        <p>The below code is used to print a statement in PHP</p>
+        <div class="wrapper">
+
+            <pre><code class="language-php">echo "Hello World", " Learning php";</code></pre>
+            <p>Instead of <b>echo</b> you can use <b>print</b></p>
+            <pre><code class="language-php">print "Hello World" . " Learning php";</code></pre>
+        </div>
+        <p>The "<b>.</b>" here means concatination.</p>
+
+
+        <hr style="margin-top: 20px;">
+        <p class="myMargin">Creating a variable in php</p>
+        <div class="wrapper">
+
+            <pre><code class="language-php">$vari = "Harshal";
+echo "Hello there, my name is ${vari}";
+</code></pre>
+        </div>
+        <p>The name of the variables <b>cannot</b> start with the numericals</p>
+        <hr style="margin-top: 20px;">
+        <p class="myMargin">
+            The following way is to make a comment in php.
+        </p>
+        <div class="wrapper">
+            <pre><code class="language-php">// echo "This is a comment in php";
+</code></pre>
+        </div>
+
+
+        <h2 class="myMargin">
+            <b>Following are the Data Types in PHP</b>
+        </h2>
+        <br>
+        <p>
+        <ul>
+            <li>Integer</li>
+            <li>Floating point or float</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Array</li>
+            <li>Object</li>
+            <li>Resource</li>
+            <li>Null</li>
+        </ul>
+        </p>
+        <br>
+
+        <hr>
+        <div class="wrapper">
+            <pre><code class="language-php">$age = 19;
+echo "My age is, {$age}"; // This is a type of integer
+echo "&lt;br>";
+$pi = 3.14;
+echo "Value of pi is, {$pi}"; // This is a type of float
+echo "&lt;br>";
+$statement = "Way to a full stack web developer";
+echo "Example of string is, {$statement}"; // This is a type of string
+echo "&lt;br>";
+$is_allowed = true;
+echo "Example of boolean is, {$is_allowed}"; // This is a type of boolean
+echo "&lt;br>";
+</code></pre>
+
+
+            <p class="myMargin"><b>Arrays</b></p>
+            <hr>
+            <pre><code class="language-php">$cars = array('bmw', 'lambourghini', 'mercedes');
+$carsFav = array('bullet', 'admiral', 'alpha');
+var_dump($cars);
+echo "&lt;br>";
+var_dump($carsFav);
+echo "&lt;br>";
+print_r($cars);
+echo "&lt;br>";
+print_r($carsFav);
+
+$merger = array_merge($cars, $carsFav);
+print_r($merger);</code></pre>
+
+
+
+
+
+<p class="myMargin"><b>Associative arrays</b></p>
+<hr>
+<p>method-01</p>
+<pre><code class="language-php">$list1 = array("audi" => 45, "BMW" => 34, "mercedes" => 23);
+print_r($list1);
+echo "&lt;br>";
+foreach ($list1 as $key => $value){
+    echo "My " . $key . " has " . $value . " mileage &lt;br>";
+}</code></pre>
+
+
+
+
+<p class="myMargin"><b>All code till here</b></p>
+<hr>
+<pre class="scoll"><code class="language-php">&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Demo PHP&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;?php
+    echo "This is a new file "; //This is how you print a line in php
+
+
+    // Playing with variables
+
+    $name = "Harshal";
+    echo "My name is {$name}";
+
+    // echo "This is a comment in php";
+
+
+    $age = 19;
+    echo "My age is, {$age}"; // This is a type of integer
+    echo "&lt;br>";
+    
+    $pi = 3.14;
+    echo "Value of pi is, {$pi}"; // This is a type of float
+    echo "&lt;br>";
+    
+    $statement = "Way to a full stack web developer";
+    echo "Example of string is, {$statement}"; // This is a type of string
+    echo "&lt;br>";
+    
+    $is_allowed = true;
+    echo "Example of boolean is, {$is_allowed}"; // This is a type of boolean
+    echo "&lt;br>";
+
+    // $arr = ["string", 23, false, null, 54.4];
+    // echo "Example of array is, {$arr}"; // This is a type of array
+
+    // $arr = ["string", 23, false, null, 54.4];
+    // echo "Example of array is, {$arr}"; // This is a type of array
+
+
+
+    $cars = array('BMW', 'mercedes', 'audi', 'jaguar', 'lamborghini');
+    echo $cars[2];
+
+    // gives all the information about each element of the array.
+    var_dump($cars);
+    echo "&lt;br>";
+    // gives redable information about the array.
+    print_r($cars);
+    
+
+    //Random array
+    $bestCars = array('admiral', 'alpha', 'euros');
+    
+    echo "&lt;br>";
+    // Concating two or more arrays
+    $merger = array_merge($cars, $bestCars);
+    print_r($merger);
+    
+    echo "&lt;br>";
+    $list1 = array("audi" => 45, "BMW" => 34, "mercedes" => 23);
+    print_r($list1);
+    echo "&lt;br>";
+
+    foreach ($list1 as $key => $value){
+        echo "My " . $key . " has " . $value . " mileage &lt;br>";
+    }
+    
+    ?>
+&lt;/body>
+&lt;/html></code></pre>
+
+
+<p class="myMargin"><b>Multi-dimensional array</b></p>
+    <pre><code class="language-php">$players = array(
+    "Strong" => array('Roman', 'Brock', 'undertaker'),
+    "Weak" => array('rey mysterio', 'james elisworth', 'dolph zigler')
+);
+echo $players["Strong"][0];  // Try using a loop here.</code></pre>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="prism.js"></script>
+</body>
+
+</html>
